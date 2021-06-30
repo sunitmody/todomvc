@@ -18,12 +18,50 @@ var app = app || {};
 					<button
 						className="clear-completed"
 						onClick={this.props.onClearCompleted}>
-						Clear completed
+						Delete completed
 					</button>
 				);
 			}
 
 			var nowShowing = this.props.nowShowing;
+
+			var handleTagClick = this.props.handleTagClick
+
+			var tagsOnly = this.props.todos.map(function (todo) {
+				return todo.tags;
+			})
+
+			var uniqueTagsOnly = [...new Set(tagsOnly.flat())];
+
+			var tagList = uniqueTagsOnly.filter(function (tag) {
+				return tag !== '';
+			})
+
+			var footerTagList = tagList.map(function (tag) {
+				return (
+					<li>
+						<a
+							href={`#/${tag}`}
+							className="tags"
+							onClick={handleTagClick}>
+								{tag}
+						</a>
+					</li>
+				)
+			});
+
+			var clearTagsButton = null;
+
+			if (this.props.selectedTags.length !== 0) {
+				clearTagsButton = (
+					<button
+						className="clear-tags"
+						onClick={this.props.onClearTags}>
+						Clear tags filter
+					</button>
+				);
+			}
+
 			return (
 				<footer className="footer">
 					<span className="todo-count">
@@ -54,7 +92,15 @@ var app = app || {};
 							</a>
 						</li>
 					</ul>
-					{clearButton}
+					<div className="clear-buttons">
+						{clearButton}
+						{clearTagsButton}
+					</div>
+					<br></br>
+					<ul className="filters tags">
+						Filter by tag:
+						{footerTagList}
+					</ul>
 				</footer>
 			);
 		}

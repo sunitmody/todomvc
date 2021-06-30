@@ -76,6 +76,19 @@ var app = app || {};
 		},
 
 		render: function () {
+
+			var tags = null;
+
+			if (this.props.todo.tags.length !== 0) {
+				tags = this.props.todo.tags.map(function (tag) {
+					return (
+						<div className="tagDiv">
+							{`${tag}`}
+						</div>
+					);
+				})
+			}
+
 			return (
 				<li className={classNames({
 					completed: this.props.todo.completed,
@@ -89,7 +102,8 @@ var app = app || {};
 							onChange={this.props.onToggle}
 						/>
 						<label onDoubleClick={this.handleEdit}>
-							{this.props.todo.title}
+							{`${this.props.todo.title}`}
+							{tags}
 						</label>
 						<button className="destroy" onClick={this.props.onDestroy} />
 					</div>

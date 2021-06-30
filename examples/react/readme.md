@@ -35,3 +35,43 @@ _If you have other helpful links to share, or find any of the links above no lon
 The app is built with [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) and compiled at runtime for a lighter and more fun code reading experience. As stated in the link, JSX is not mandatory.
 
 To run the app, spin up an HTTP server (e.g. `python -m SimpleHTTPServer`) and visit http://localhost/.../myexample/.
+
+# Sunit's Implementation
+
+- Fork and clone repo
+
+- run: npm install --global gulp-cli
+
+- updated devDependencies in root directory to "gulp": "^4.0.0",
+
+- run: npm install
+
+- Updated gulp to latest version 4.0.2
+
+- Modified gulpfile in root directory to use gulp.series() (modfication required because old code was deprecated)
+
+- Run: npm start to start gulp test-server on port 8000 (localhost:8000)
+
+- Click "react" which will take you to: http://localhost:8000/examples/react/#/
+
+- CSS modified at ~/react/node_modules/todomvc-app-css/index.css
+
+- If you're getting issues try clearing the browser's local storage object (that's where the todo's are being saved) using: localStorage.clear(); in the console
+
+# Notes/Ideas for adding tags feature
+
+- in todoModel.js add a "tags" property to the todos object when they are created. tags: ["funny", "green", "etc"]
+
+- in app.jsx use the shownTodos variable to filter based on tag (currently filtering based on completed or not)
+
+## Possible areas of improvement
+
+- Update React syntax to ES6 or use React Hooks
+
+- Add abiltiy to edit or remove existing tags
+
+- Add multiple tags per todo item (separated by commas or spaces)
+
+- Create a separate component for "tag" and maybe "tagInput" for better separation of concerns
+
+- Add ability to filter on multiple tags simultaneously
