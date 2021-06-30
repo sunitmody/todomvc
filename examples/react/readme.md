@@ -49,10 +49,10 @@ http://localhost:8000/examples/react/#/
 - The feature I added was the functionality to add multiple tags to each todo item that is created. The tags are visible next to each todo item. The user is able to filter through the todos and display them by selecting one or multiple tags. The user can also remove an already selected tag (for filtering) by clicking on it again. Lastly the user can click "Clear tags filter" to completely remove all tag filters.
 
 ### Original
-<img src="readme_images/original_todo.png" width="100">
+<img src="readme_images/original_todo.png" width="600">
 
 ### After tag feature added
-<img src="readme_images/tag_feature.png" width="100">
+<img src="readme_images/tag_feature.png" width="600">
 
 <a name="highlights"/>
 
