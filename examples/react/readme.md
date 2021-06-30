@@ -13,14 +13,14 @@
 <a name="description"/>
 
 ## Project Description
-- This project is a modification to an existing todoMVC repo created using React
+- This project is a modification to an existing todoMVC implementation created using React
 
 <a name="link"/>
 
 ## Project Template Link
 - The orignal repo that I modified:
   -  https://github.com/tastejs/todomvc/tree/gh-pages/examples/react
-- Original application hosted on internet:
+- Original application hosted online:
   - https://todomvc.com/examples/react/#/
 
 <a name="getting"/>
@@ -28,7 +28,7 @@
 ## Getting Started
 - Fork and clone repo to your local enviornment
 
-- From within the root directory ~/todomvc/examples/react
+- From within the root directory (~/todomvc/examples/react)
 ```
 $ npm install
 ```
@@ -46,7 +46,7 @@ http://localhost:8000/examples/react/#/
 <a name="feature"/>
 
 ## Implemented Feature
-- The feature I added was the functionality to add multiple tags to each todo item that is created. The tags are visible next to each todo item. The user is able to filter through the todos and display them by selecting one or multiple tags. The user can also remove an already selected tag (for filtering) by clicking on it again. Lastly the user can click "Clear tags filter" to completely remove all tag filters.
+- The feature I added was the functionality to add multiple tags to each todo item that is created. The tags are visible next to each todo item. The user is able to filter through the todos and display them by selecting one or multiple tags. The user can also remove an already selected tag (for filtering) by clicking on it again. Lastly, the user can click "Clear tags filter" to completely remove all tag filters.
 
 ### Original
 <img src="readme_images/original_todo.png" width="600">
@@ -62,6 +62,8 @@ http://localhost:8000/examples/react/#/
 - Used array methods (higher-order functions) such as .map, .filter, and .some to modify arrays to help with state management.
 
 - Managed filtering of todos by tags using a click-handler to modify state. This is compared to the existing filtering logic of active vs completed todos which uses the URL's endpoint and routing to modify state.
+
+- Implemented logic to prevent repeated tags from appearing in the footer and for todos without tags to not cause erroneous HTML elements to be created in the footer or next to the todo item.
 
 <a name="improvements"/>
 
