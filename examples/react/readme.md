@@ -91,7 +91,7 @@ Highlighted Technologies:
 
 <a name="misc"/>
 
-### Changes made to original repo / Miscellaneous
+### Changes made to original repo to get it to work / Miscellaneous
 - Installed gulp command line interface (npm install --global gulp-cli)
 - Updated devDependencies in root directory to "gulp": "^4.0.0",
 - Updated gulp to latest version 4.0.2
