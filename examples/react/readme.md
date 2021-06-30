@@ -9,6 +9,7 @@
 5. [Highlights](#highlights)
 6. [Possible areas of improvement](#improvements)
 7. [Technologies](#techs)
+8. [Miscellaneous](#misc)
 
 <a name="description"/>
 
@@ -87,3 +88,13 @@ Highlighted Technologies:
 - React
 - Gulp
 - Javascript
+
+<a name="misc"/>
+
+### Changes made to original repo / Miscellaneous
+- Installed gulp command line interface (npm install --global gulp-cli)
+- Updated devDependencies in root directory to "gulp": "^4.0.0",
+- Updated gulp to latest version 4.0.2
+- Modified gulpfile in root directory to use gulp.series() (modfication required because old code was deprecated)
+- CSS modified at ~/react/node_modules/todomvc-app-css/index.css
+- If any errors encountered, try localStorage.clear() in the console. State data is being stored locally in the broswer and may need to be cleared.
