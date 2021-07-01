@@ -23,7 +23,7 @@ var app = app || {};
 				selectedTags: [],
 				editing: null,
 				newTodo: '',
-				newTags: []
+				newTags: ''
 			};
 		},
 
@@ -82,10 +82,14 @@ var app = app || {};
 			event.preventDefault();
 
 			var val = this.state.newTodo.trim();
-			var tagString = this.state.newTags.trim();
-			var tagArray = tagString.split(' ');
 
-			console.log(`tags: ${tagArray}`)
+			let tagArray = [];
+			if (this.state.newTags !== '') {
+				var tagString = this.state.newTags.trim();
+				tagArray = tagString.split(' ');
+			}
+
+			// console.log(`tags: ${tagArray}`)
 
 			if (val) {
 				this.props.model.addTodo(val, tagArray); // saves todo item to local storage

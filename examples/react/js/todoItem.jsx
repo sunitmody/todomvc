@@ -79,6 +79,8 @@ var app = app || {};
 
 			var tags = null;
 
+			console.log(`how many tags: ${this.props.todo.tags.length}`)
+
 			if (this.props.todo.tags.length !== 0) {
 				tags = this.props.todo.tags.map(function (tag) {
 					return (
