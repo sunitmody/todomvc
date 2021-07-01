@@ -2,7 +2,7 @@
 ## Sunit Mody (2021)
 
 ## Table of Contents
-1. [Description](#description)
+1. [Project Description](#description)
 2. [Project Template Link](#link)
 3. [Getting Started](#getting)
 4. [Implemented Feature](#feature)
@@ -29,7 +29,12 @@
 ## Getting Started
 - Fork and clone repo to your local enviornment
 
-- From within the root directory (~/todomvc/examples/react)
+- From within the repo root directory
+```
+$ npm install
+```
+
+- From within the root directory of the React sub-repo (~/todomvc/examples/react)
 ```
 $ npm install
 ```
@@ -47,7 +52,7 @@ http://localhost:8000/examples/react/#/
 <a name="feature"/>
 
 ## Implemented Feature
-- The feature I added was the functionality to add multiple tags to each todo item that is created. The tags are visible next to each todo item. The user is able to filter through the todos and display them by selecting one or multiple tags. The user can also remove an already selected tag (for filtering) by clicking on it again. Lastly, the user can click "Clear tags filter" to completely remove all tag filters.
+- The feature I added was the functionality to add one or multiple space separated tags to each todo item that is created. The tags are visible next to each listed todo item. The user is able to filter through the todos and display them by selecting one or multiple tags. The user can also remove an already selected tag, for filtering, by clicking on it again. Lastly, the user can click "Clear tags filter" to completely remove all tag filters.
 
 ### Original
 <img src="readme_images/original_todo.png" width="600">
@@ -60,9 +65,9 @@ http://localhost:8000/examples/react/#/
 ## Highlights
 - Added CSS styling (including flex-box) to make tags easily visible. Also added a different color hover highlighting of tags to differentiate from active vs completed filters.
 
-- Used array methods (higher-order functions) such as .map, .filter, and .some to modify arrays to help with state management.
+- Utilized array methods (some of which are higher-order functions) such as .map, .filter, .flat and .some to modify arrays to help with state management.
 
-- Managed filtering of todos by tags using a click-handler to modify state. This is compared to the existing filtering logic of active vs completed todos which uses the URL's endpoint and routing to modify state.
+- Managed filtering of todos by tags using a click-handler to modify state. This is different than the existing filtering logic of active vs completed todos which uses the URL's endpoint and routing to modify state.
 
 - Implemented logic to prevent repeated tags from appearing in the footer and for todos without tags to not cause erroneous HTML elements to be created in the footer or next to the todo item.
 
@@ -72,7 +77,7 @@ http://localhost:8000/examples/react/#/
 
 - Update React and JS syntax to ES6 and/or use React Hooks
 
-- Add abiltiy to edit or remove existing tags
+- Add the functionality to edit or remove existing tags
 
 - Highlight selected tags so it's easy to see which tags are currently being used to filter the todos with
 
@@ -91,7 +96,7 @@ Highlighted Technologies:
 
 <a name="misc"/>
 
-### Changes made to original repo to get it to work / Miscellaneous
+## Miscellaneous (Changes made to original repo to get it to work)
 - Installed gulp command line interface (npm install --global gulp-cli)
 - Updated devDependencies in root directory to "gulp": "^4.0.0",
 - Updated gulp to latest version 4.0.2
