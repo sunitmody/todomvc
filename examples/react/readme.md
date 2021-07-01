@@ -85,6 +85,8 @@ http://localhost:8000/examples/react/#/
 
 - Clean up styling to be able to handle numerous tags without cluttering the footer component
 
+- Change tags filter logic from "union" to "intersection"
+
 <a name="techs"/>
 
 ## Technologies

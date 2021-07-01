@@ -76,7 +76,6 @@ var app = app || {};
 		},
 
 		render: function () {
-
 			var tags = null;
 
 			if (this.props.todo.tags.length !== 0) {
